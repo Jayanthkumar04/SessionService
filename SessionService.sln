@@ -1,34 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35707.178 d17.12
+VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SessionService", "SessionService\SessionService.csproj", "{CDEB26BB-30AC-4ACE-B735-4802E806DB1D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Session2Service", "Session2Service\Session2Service.csproj", "{342D6E96-2914-4FDC-94C1-21AB8B4B4C7E}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ServiceHost", "ServiceHost\", "{107E4A86-AA56-4BCD-AEDA-FFCB7C2659A8}"
-	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.7.2"
-		ProjectReferences = "{cdeb26bb-30ac-4ace-b735-4802e806db1d}|SessionService.dll;"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_59128"
-		Debug.AspNetCompiler.PhysicalPath = "ServiceHost\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_59128\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_59128"
-		Release.AspNetCompiler.PhysicalPath = "ServiceHost\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_59128\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "59128"
-		SlnRelativePath = "ServiceHost\"
-		DefaultWebSiteLanguage = "Visual C#"
-	EndProjectSection
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleHost2", "ConsoleHost2\ConsoleHost2.csproj", "{D2977A9C-867E-42C4-AC8F-A4F1BB4C7E62}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleClient", "ConsoleClient\ConsoleClient.csproj", "{04D8129C-3FEB-4CE2-A389-ACC617BC23FB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleClient2", "ConsoleClient2\ConsoleClient2.csproj", "{E4C3078C-375B-4B8E-9239-90B685B69DCA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,18 +15,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{CDEB26BB-30AC-4ACE-B735-4802E806DB1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CDEB26BB-30AC-4ACE-B735-4802E806DB1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CDEB26BB-30AC-4ACE-B735-4802E806DB1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CDEB26BB-30AC-4ACE-B735-4802E806DB1D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{107E4A86-AA56-4BCD-AEDA-FFCB7C2659A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{107E4A86-AA56-4BCD-AEDA-FFCB7C2659A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{107E4A86-AA56-4BCD-AEDA-FFCB7C2659A8}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{107E4A86-AA56-4BCD-AEDA-FFCB7C2659A8}.Release|Any CPU.Build.0 = Debug|Any CPU
-		{04D8129C-3FEB-4CE2-A389-ACC617BC23FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{04D8129C-3FEB-4CE2-A389-ACC617BC23FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{04D8129C-3FEB-4CE2-A389-ACC617BC23FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{04D8129C-3FEB-4CE2-A389-ACC617BC23FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{342D6E96-2914-4FDC-94C1-21AB8B4B4C7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{342D6E96-2914-4FDC-94C1-21AB8B4B4C7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{342D6E96-2914-4FDC-94C1-21AB8B4B4C7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{342D6E96-2914-4FDC-94C1-21AB8B4B4C7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2977A9C-867E-42C4-AC8F-A4F1BB4C7E62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2977A9C-867E-42C4-AC8F-A4F1BB4C7E62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2977A9C-867E-42C4-AC8F-A4F1BB4C7E62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2977A9C-867E-42C4-AC8F-A4F1BB4C7E62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4C3078C-375B-4B8E-9239-90B685B69DCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4C3078C-375B-4B8E-9239-90B685B69DCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4C3078C-375B-4B8E-9239-90B685B69DCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4C3078C-375B-4B8E-9239-90B685B69DCA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

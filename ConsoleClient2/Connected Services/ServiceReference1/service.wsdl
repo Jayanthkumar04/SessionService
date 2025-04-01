@@ -52,37 +52,16 @@
   <wsdl:message name="IService1_getCourses_OutputMessage">
     <wsdl:part name="parameters" element="tns:getCoursesResponse" />
   </wsdl:message>
-  <wsdl:portType name="IService1">
-    <wsdl:operation name="save">
+  <wsdl:portType msc:usingSession="true" name="IService1">
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="save">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/save" message="tns:IService1_save_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/saveResponse" message="tns:IService1_save_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="getCourses">
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="true" name="getCourses">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/getCourses" message="tns:IService1_getCourses_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/getCoursesResponse" message="tns:IService1_getCourses_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
-  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
-    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="save">
-      <soap:operation soapAction="http://tempuri.org/IService1/save" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="getCourses">
-      <soap:operation soapAction="http://tempuri.org/IService1/getCourses" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-  </wsdl:binding>
   <wsdl:binding name="NetTcpBinding_IService1" type="tns:IService1">
     <wsp:PolicyReference URI="#NetTcpBinding_IService1_policy">
     </wsp:PolicyReference>
@@ -107,9 +86,6 @@
     </wsdl:operation>
   </wsdl:binding>
   <wsdl:service name="Service1">
-    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
-      <soap:address location="http://localhost:7000/" />
-    </wsdl:port>
     <wsdl:port name="NetTcpBinding_IService1" binding="tns:NetTcpBinding_IService1">
       <soap12:address location="net.tcp://localhost:6788/" />
       <wsa10:EndpointReference>

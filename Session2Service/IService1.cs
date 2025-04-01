@@ -7,14 +7,15 @@ using System.Text;
 
 namespace Session2Service
 {
-    [ServiceContract]
+    [ServiceContract(SessionMode=SessionMode.Required)]
     public interface IService1
     {
 
-        [OperationContract]
+        [OperationContract(IsInitiating =true)]
+        
         void save(Course course);
 
-        [OperationContract]
+        [OperationContract(IsTerminating =true)]
 
          List<Course> getCourses();
 

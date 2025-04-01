@@ -75,7 +75,7 @@ namespace ConsoleClient2.ServiceReference1 {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IService1")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IService1", SessionMode=System.ServiceModel.SessionMode.Required)]
     public interface IService1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/save", ReplyAction="http://tempuri.org/IService1/saveResponse")]
@@ -84,10 +84,10 @@ namespace ConsoleClient2.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/save", ReplyAction="http://tempuri.org/IService1/saveResponse")]
         System.Threading.Tasks.Task saveAsync(ConsoleClient2.ServiceReference1.Course course);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getCourses", ReplyAction="http://tempuri.org/IService1/getCoursesResponse")]
+        [System.ServiceModel.OperationContractAttribute(IsTerminating=true, Action="http://tempuri.org/IService1/getCourses", ReplyAction="http://tempuri.org/IService1/getCoursesResponse")]
         ConsoleClient2.ServiceReference1.Course[] getCourses();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getCourses", ReplyAction="http://tempuri.org/IService1/getCoursesResponse")]
+        [System.ServiceModel.OperationContractAttribute(IsTerminating=true, Action="http://tempuri.org/IService1/getCourses", ReplyAction="http://tempuri.org/IService1/getCoursesResponse")]
         System.Threading.Tasks.Task<ConsoleClient2.ServiceReference1.Course[]> getCoursesAsync();
     }
     

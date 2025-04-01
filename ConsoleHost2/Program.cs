@@ -12,22 +12,27 @@ namespace ConsoleHost2
     {
         static void Main(string[] args)
         {
-            Uri baseAddress = new Uri("http://localhost:7000");
+            //Uri baseAddress = new Uri("http://localhost:7000");
             Uri tcpBaseAddress = new Uri("net.tcp://localhost:6788");
 
             //ServiceHost sh = new ServiceHost(typeof(Service1),baseAddress);
 
-            ServiceHost sh = new ServiceHost(typeof(Service1), new Uri[] { baseAddress, tcpBaseAddress });
+            //ServiceHost sh = new ServiceHost(typeof(Service1), new Uri[] { baseAddress, tcpBaseAddress });
+            ServiceHost sh = new ServiceHost(typeof(Service1), new Uri[] {  tcpBaseAddress });
 
-            ServiceEndpoint se = sh.AddServiceEndpoint(typeof(IService1), new BasicHttpBinding(), baseAddress);
+            var tcpBinding = new NetTcpBinding();
 
-            ServiceEndpoint tcpSe = sh.AddServiceEndpoint(typeof(IService1), new NetTcpBinding(), tcpBaseAddress);
+            tcpBinding.ReceiveTimeout = new TimeSpan(0, 0, 40);
+
+            //ServiceEndpoint se = sh.AddServiceEndpoint(typeof(IService1), new BasicHttpBinding(), baseAddress);
+
+            ServiceEndpoint tcpSe = sh.AddServiceEndpoint(typeof(IService1), tcpBinding, tcpBaseAddress);
 
             ServiceMetadataBehavior smb = new ServiceMetadataBehavior();
 
-            smb.HttpGetEnabled = true;
+            //smb.HttpGetEnabled = true;
 
-            //smb.HttpGetEnabled = false;
+            smb.HttpGetEnabled = false;
             sh.Description.Behaviors.Add(smb);
 
             ServiceEndpoint httpSeMex = sh.AddServiceEndpoint(typeof(IMetadataExchange),

@@ -13,14 +13,24 @@ namespace ConsoleClient2
         {
             Service1Client service = new Service1Client("NetTcpBinding_IService1");
 
-            for(int i=0;i<3;i++)
-            {
-                Console.WriteLine("entr record " +( i+1));
+            //for(int i=0;i<3;i++)
+            //{
+            //    Console.WriteLine("entr record " +( i+1));
 
-                service.save(new Course() { Id=int.Parse(Console.ReadLine()),Name=Console.ReadLine() });
-            }
+            //    service.save(new Course() { Id=int.Parse(Console.ReadLine()),Name=Console.ReadLine() });
+            //}
 
+            //GetCourses(service);
+
+            service.save(new Course() { Id = int.Parse(Console.ReadLine()), Name = Console.ReadLine() });
             GetCourses(service);
+
+            service = new Service1Client("NetTcpBinding_IService1");
+
+
+            service.save(new Course() { Id = int.Parse(Console.ReadLine()), Name = Console.ReadLine() });
+            GetCourses(service);
+
 
             Console.ReadKey();
             

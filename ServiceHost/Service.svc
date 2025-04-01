@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Service="SessionService.Service1" CodeBehind="~/App_Code/Service.cs" %>
